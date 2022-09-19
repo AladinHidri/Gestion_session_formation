@@ -1,0 +1,62 @@
+<div class="dashboard_header">
+    <div class="dashboard_stats dashboard_sessions">
+        <div class="image">
+            <img src="assets/sessions.png">
+        </div>
+
+        <div class="info">
+            <p class="info_stats">{{ sessionItems.length }}</p>
+            <p class="info_domain">Sessions</p>
+        </div>
+    </div>
+    <div class="dashboard_stats dashboard_participants">
+        <div class="image">
+            <img src="assets/participants.png">
+        </div>
+        <div class="info">
+            <p class="info_stats">{{ participantItems.length }}</p>
+            <p class="info_domain">Participants</p>
+
+        </div>
+    </div>
+    <div class="dashboard_stats dashboard_formateurs">
+        <div class="image">
+            <img src="assets/formateurs.png">
+        </div>
+
+        <div class="info">
+            <p class="info_stats">{{ formateurItems.length }}</p>
+            <p class="info_domain">Participants</p>
+
+        </div>
+    </div>
+</div>
+
+<div class="dashboard_content">
+    <div class="trak_table">
+        <table>
+            <thead>
+            <tr>
+                <th class="track_header">track</th>
+                <th class="sessions_header">Session</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let row of sessiontracingTable; let index = index;"
+                [ngClass]="{'dark': index%2 == 0, 'normal': index%2 == 1}">
+                <td>
+                    {{row['track_name']}}
+                </td>
+                <td>
+                    {{row['track_session']}}
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+    <div class="top_formateurs">
+
+    </div>
+</div>

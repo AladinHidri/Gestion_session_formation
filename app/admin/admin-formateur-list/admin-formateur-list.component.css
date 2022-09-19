@@ -1,0 +1,52 @@
+#supp, #edit{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+
+
+}
+body{
+    width: 270x;
+}
+#edit{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+
+
+}
+
+#refs{
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 85px;
+}
+
+#add{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+
+
+header h1{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #4472c4;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    height: 45px;
+    padding-left: 400px;
+    padding-top: 10px;
+    margin-top: 20px;
+    width: 500px;
+    margin-left: 85px;
+}
+
+table{
+    margin-top: 5px;
+    width: 900px;
+    margin-left: 85px;
+}

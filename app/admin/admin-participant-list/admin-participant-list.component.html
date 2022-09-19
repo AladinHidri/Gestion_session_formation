@@ -1,0 +1,45 @@
+
+<body>
+<nav>
+    <a routerLink="/admin/participant/list" routerLinkActive="active">
+        <img id="refs" src="assets/refresh.png" class="icon"/>
+    </a>
+    <a routerLink="/admin/participant/add" routerLinkActive="active">
+        <img id="add" src="assets/add_2.png" class="icon"/>
+    </a>
+
+</nav>
+<header>
+    <h1>Liste des Participants </h1>
+
+</header>
+
+<section>
+
+    <table class="table table-striped">
+
+
+        <tbody>
+
+        <tr  *ngFor=" let participantItem of participantItems; let index = index"
+        [ngStyle]="{'background-color': index % 2 === 0 ? '#F1F3F7' : '#C3CEE8' }" >
+      
+            <td>{{participantItem.nomParticipant}}</td>
+            <td>{{participantItem.prenomParticipant}}</td>
+            <td>{{participantItem.adresseParticipant}}</td>
+            <td>{{participantItem.emailParticipant}}</td>
+            <td>{{participantItem.societeParticipant}}</td>
+            <td>{{participantItem.posteParticipant}}</td>
+            <td><a (click)="onDelete(participantItem)"><img id="supp" src="assets/delete.png"></a></td>
+            <td><a [routerLink]="['/admin/participant/edit',participantItem.idParticipant]"><img id="edit"
+                                                                                          src="assets/edit_2.png"></a>
+            </td>
+
+        </tr>
+
+
+        </tbody>
+
+    </table>
+</section>
+</body>

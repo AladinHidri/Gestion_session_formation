@@ -1,0 +1,35 @@
+<body>
+<nav>
+    <a routerLink="/admin/formateur/list">
+        <img id="refs" src="assets/refresh.png" class="icon"/>
+    </a>
+    <a routerLink="/admin/formateur/add">
+        <img id="add" src="assets/add_2.png" class="icon"/>
+    </a>
+
+</nav>
+<header>
+    <h1>Liste des Formateurs </h1>
+
+</header>
+
+
+<table class="table table-striped">
+    <tbody>
+    <tr *ngFor=" let formateurItem of formateurItems ; let index = index"
+        [ngStyle]="{'background-color': index % 2 === 0 ? '#F1F3F7' : '#C3CEE8' }">
+     
+        <td>{{formateurItem.nomFormateur}}</td>
+        <td>{{formateurItem.prenomFormateur}}</td>
+        <td>{{formateurItem.adresseFormateur}}</td>
+        <td>{{formateurItem.emailFormateur}}</td>
+        <td>{{formateurItem.domaineFormateur}}</td>
+        <td><a (click)="onDelete(formateurItem)"><img id="supp" src="assets/delete.png"></a></td>
+        <td><a [routerLink]="['/admin/formateur/edit',formateurItem.idFormateur]">
+            <img id="edit" src="assets/edit_2.png"></a>
+        </td>
+    </tr>
+    </tbody>
+
+</table>
+</body>

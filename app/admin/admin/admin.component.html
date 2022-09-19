@@ -1,0 +1,53 @@
+<div class="row page-header">
+    <div class="logo">
+        <img src="assets/enicar-logo.png" class="icon"/>
+    </div>
+    <div class="header-text">
+        <span>Espace Admin</span>
+    </div>
+    <div class="header-text date-address">
+        <span>date & address</span>
+    </div>
+    <div class="logo logout-logo">
+        <img src="assets/deco-btn.png" class="icon"/>
+    </div>
+
+</div>
+
+<div class="content">
+    <div class="menu">
+        <div class="menu-content">
+            <div class="search">
+                <img class="search-img icon" src="assets/search.png" >
+                <input class="search-text" type="text" name="search" placeholder="chercher session">
+            </div>
+            <div class="menu-items">
+                <ul class="no-bullets">
+                    <li><img src="assets/dashboard.png"><span><a routerLink="/admin">Dashboard</a></span></li>
+                    <li><img src="assets/sessions.png"><span><a routerLink="/admin/sessions/list">Sessions</a></span></li>
+                    <li><img src="assets/formateurs.png"><span><a routerLink="/admin/formateur/list">Formateurs</a></span></li>
+                    <li><img src="assets/participants.png"><span><a routerLink="/admin/participant/list">Participants</a></span></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <nav *ngIf=" routename.includes('sessions')">
+        <a routerLink="/admin/sessions/list" routerLinkActive="active">
+            <img src="assets/list.png" class="icon"/>
+        </a>
+        <a routerLink="/admin/sessions/add" routerLinkActive="active">
+            <img src="assets/add.png" class="icon"/>
+        </a>
+        <a [routerLink]="['/admin/sessions/edit', 1]" routerLinkActive="active">
+            <img src="assets/edit.png" class="icon"/>
+        </a>
+    </nav>
+
+    <section [ngClass]="{'sessions-section' : routename.includes('sessions')}" >
+        <router-outlet></router-outlet>
+    </section>
+</div>
+

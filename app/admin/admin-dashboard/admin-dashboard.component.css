@@ -1,0 +1,107 @@
+.dashboard_header{
+    margin-top: 2%;
+    width: 100%;
+    height: 28%;
+    display: flex;
+}
+
+.dashboard_stats{
+    width: 31%;
+    height: 90%;
+    display: flex;
+    color: #ffffff;
+}
+
+.dashboard_stats .image{
+    width: 60%;
+    height: 100%;
+}
+
+.dashboard_sessions .image img{
+    width: 85%;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+.dashboard_participants .image img{
+    width: 90%;
+    margin-top: -2%;
+    margin-left: 5%;
+}
+
+.dashboard_formateurs .image img{
+    width: 77%;
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+.dashboard_sessions{
+    margin: 0% 2% 0% 2%;
+    background-color: #ed7d31;
+}
+
+.dashboard_participants{
+    background-color: #00b050;
+}
+
+.dashboard_formateurs{
+    margin: 0% 2% 0% 2%;
+    background-color: #7030a0;
+}
+
+.dashboard_stats .info{
+    margin-top: 7%;
+    width: 40%;
+    height: 65%;
+}
+
+.dashboard_stats .info p{
+    text-align: center;
+}
+
+.dashboard_stats .info .info_stats{
+    font-size: 2em;
+}
+
+.dashboard_stats .info .info_domain{
+    padding-top: 3px;
+    font-size: 1.5em;
+    margin-block-start: -1em;
+}
+
+.dashboard_content{
+    height: 68.8%;
+    width: 100%;
+    display: flex;
+}
+
+.dashboard_content .trak_table{
+    min-height: 50%;
+    width: 60%;
+    margin: 5%;
+}
+.trak_table thead{
+    background-color: #5b9bd5;
+    color: #ffffff;
+}
+.trak_table tbody{
+    text-align: center;
+}
+.trak_table thead .track_header{
+    width: 20%;
+}
+.trak_table thead .sessions_header{
+    width: 30%;
+}
+
+.dashboard_content .top_formateurs{
+    min-height: 50%;
+    width: 40%;
+}
+.normal{
+    background-color: #eaeff7;
+}
+
+.dark{
+    background-color: #d2deef;
+}

@@ -1,0 +1,40 @@
+<body class="body">
+<header>
+    <h2>Ajouter un formateur</h2>
+</header>
+<form #formateurItemForm="ngForm" (ngSubmit)="addSession(formateurItemForm.value)">
+
+
+    <ul>
+        <li>
+            <label for=" nomFormateur ">Nom de formateur</label>
+            <input type="text" name="nomFormateur" id="nomFormateur" ngModel required>
+        </li>
+
+
+        <li>
+            <label for=" prenomFormateur ">Prenom de formateur</label>
+            <input type="text" name="prenomFormateur" id="prenomFormateur" ngModel required>
+        </li>
+
+        <li>
+            <label for=" adresseFormateur ">Adresse de formateur</label>
+            <input type="text" name="adresseFormateur" id="adresseFormateur" ngModel required>
+        </li>
+
+        <li>
+            <label for=" emailFormateur ">E-mail de formateur</label>
+            <input type="email" name="emailFormateur" id="emailFormateur" ngModel required>
+        </li>
+
+        <li>
+            <label for=" domaineFormateur ">Domaine d'expertise</label>
+            <input type="text" name="domaineFormateur" id="domaineFormateur" ngModel required>
+        </li>
+
+
+    </ul>
+
+    <button type="submit" [disabled]="!formateurItemForm.form.valid">Enregistrer</button>
+</form>
+</body>
